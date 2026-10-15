@@ -1,4 +1,4 @@
-package unidad_2;
+package tema2;
 import java.util.Scanner;
 
 public class ejercicio_1 {

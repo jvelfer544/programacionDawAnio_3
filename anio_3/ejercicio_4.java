@@ -1,4 +1,4 @@
-package unidad_2;
+package tema2;
 
 public class ejercicio_4 {
 
