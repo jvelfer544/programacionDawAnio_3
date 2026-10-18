@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego del Ahorcado - DAI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <svg class="game-logo" viewBox="0 0 100 100" width="60" height="60">
+          <path d="M20,90 L80,90 M35,90 L35,10 L65,10 L65,25" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <circle cx="65" cy="35" r="10" stroke="#ef4444" stroke-width="5" fill="none"/>
+          <path d="M65,45 L65,65 M55,55 L75,55 M55,80 L65,65 L75,80" stroke="#ef4444" stroke-width="5" stroke-linecap="round" fill="none"/>
+        </svg>
+        <h1 class="animated-title">
+          <span class="rotate-left">J</span><span class="rotate-right">U</span><span class="rotate-left">E</span><span class="rotate-right">G</span><span class="rotate-left">O</span>
+          <span class="space">&nbsp;</span>
+          <span class="rotate-right">D</span><span class="rotate-left">E</span><span class="rotate-right">L</span>
+          <span class="space">&nbsp;</span>
+          <span class="rotate-left">A</span><span class="rotate-right">H</span><span class="rotate-left">O</span><span class="rotate-right">R</span><span class="rotate-left">C</span><span class="rotate-right">A</span><span class="rotate-left">D</span><span class="rotate-right">O</span>
+        </h1>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <div class="panel main-panel">
+        <div class="hangman-container">
+          <svg id="hangmanSvg" viewBox="0 0 200 200" width="180" height="180">
+            <!-- Estructura de la horca -->
+            <line x1="20" y1="180" x2="100" y2="180" class="draw-part base" />
+            <line x1="40" y1="180" x2="40" y2="20" class="draw-part pole" />
+            <line x1="40" y1="20" x2="130" y2="20" class="draw-part beam" />
+            <line x1="130" y1="20" x2="130" y2="45" class="draw-part rope" />
+            <!-- Cuerpo del Muñeco -->
+            <circle cx="130" cy="60" r="15" class="draw-part figure head" />
+            <line x1="130" y1="75" x2="130" y2="120" class="draw-part figure body" />
+            <line x1="130" y1="90" x2="105" y2="105" class="draw-part figure arm-left" />
+            <line x1="130" y1="90" x2="155" y2="105" class="draw-part figure arm-right" />
+            <line x1="130" y1="120" x2="110" y2="150" class="draw-part figure leg-left" />
+            <line x1="130" y1="120" x2="150" y2="150" class="draw-part figure leg-right" />
+          </svg>
+        </div>
+
+        <label>PALABRA A ADIVINAR</label>
+        <div class="word-display" id="wordDisplay"></div>
+
+        <div class="used-letters-container">
+          <span>Letras usadas:</span>
+          <div class="used-letters-list" id="usedLettersList"></div>
+        </div>
+
+        <div class="keyboard-container" id="virtualKeyboard">
+          <!-- Teclado generado mediante JS -->
+        </div>
+
+        <div class="controls">
+          <button class="btn-start" id="btnStart">Comenzar Partida</button>
+        </div>
+      </div>
+
+      <div class="panel stats">
+        <div class="stat-item">
+          <span>Puntuación Actual:</span>
+          <span class="stat-value" id="scoreCurrent">0</span>
+        </div>
+        <div class="stat-item">
+          <span>Puntuación Última Jugada:</span>
+          <span class="stat-value" id="scoreLast">0</span>
+        </div>
+        <div class="stat-item">
+          <span>Puntuación Máxima:</span>
+          <span class="stat-value" id="scoreMax">0</span>
+        </div>
+        <div class="stat-item">
+          <span>Num Fallos Actuales:</span>
+          <span class="stat-value" id="errorsCurrent">0</span>
+        </div>
+        <div class="stat-item">
+          <span>Num Fallos Permitidos:</span>
+          <span class="stat-value" id="errorsMax">7</span>
+        </div>
+        <div class="stat-item">
+          <span>Palabras Restantes:</span>
+          <span class="stat-value" id="wordsRemaining">0</span>
+        </div>
+
+        <div class="audio-controls">
+          <label for="toggleMusic">Música de fondo (Tetris)</label>
+          <input type="checkbox" id="toggleMusic">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="gameModal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Mensaje</h2>
+      <p id="modalBody">Detalles</p>
+      <button class="btn-primary" id="modalClose">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

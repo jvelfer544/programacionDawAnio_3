@@ -1,4 +1,4 @@
-package tema2;
+package anio_3.unidad_2;
 
 import java.util.Scanner;
 
