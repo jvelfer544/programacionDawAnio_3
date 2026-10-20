@@ -24,12 +24,10 @@ public class cuantosNegativosYcuantosPositivos_21 {
 
 			if (numeros < 0) {
 				contadorNegativo++;
+				
 			} else if (numeros > 0) {
 				contadorPositivo++;
-			} else {
-				System.out.println("El cero es neutro");
-				i --;
-			}
+			} 
 
 		} while (i <= 10);
 
