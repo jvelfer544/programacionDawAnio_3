@@ -16,6 +16,7 @@ public class diaLaSemana_ejer_15 {
 		case "martes":
 			asignatura = "programacion";
 			break;
+		case "miércoles":	
 		case "miercoles":
 			asignatura = "optativa";
 			break;
