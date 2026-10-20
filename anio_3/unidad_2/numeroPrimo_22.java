@@ -15,10 +15,11 @@ public class numeroPrimo_22 {
 			int contador = 0;
 			boolean esPrimo = true;
 			
-			
 			// hacerlo con while
 			
-			for(int i=1; i <= num; i++) {
+			int i = 1;
+			
+			while(esPrimo && i <= num) {
 				
 				if(num %i == 0) {
 					contador++;
@@ -27,13 +28,21 @@ public class numeroPrimo_22 {
 				if(contador > 2) {
 					esPrimo = false;
 				}
+				
+				i++;
+			}
+			
+			if(contador == 2) {
+				esPrimo = true;
+			} else {
+				esPrimo = false;
 			}
 			
 			if(!esPrimo) {
-				System.out.println("No es primo ");
+				System.out.println(num + " No es primo ");
 				
 			}else {
-				System.out.println("Es primo ");
+				System.out.println(num + " Si es primo ");
 				
 			}
 	}
