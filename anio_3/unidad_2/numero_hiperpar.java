@@ -1,8 +1,12 @@
 package anio_3.unidad_2;
 import java.util.Scanner;
 
-public class numero_hyperpar {
-
+public class numero_hiperpar {
+/*
+ * Un número hiperpar es aquel en el que:
+	Todos sus dígitos son pares.
+	La suma de sus dígitos también es par.
+ */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
