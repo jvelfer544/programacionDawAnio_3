@@ -1,7 +1,7 @@
 package anio_3.unidad_2;
 import java.util.Scanner;
 
-public class eje15_diaLaSemana {
+public class ejer15_diaLaSemana {
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
 		

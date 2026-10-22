@@ -1,7 +1,7 @@
 package anio_3.unidad_2;
 import java.util.Scanner;
 
-public class ejer_11_primeraCifra {
+public class ejer11_primeraCifra {
 /*
  * Escribe un programa que diga cuál es la primera cifra de un número entero introducido
  * por teclado. Se permiten números de hasta 5 cifras.

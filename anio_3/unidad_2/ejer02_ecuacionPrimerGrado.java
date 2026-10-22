@@ -2,7 +2,7 @@ package anio_3.unidad_2;
 
 import java.util.Scanner;
 
-public class ejer2_ecuacionPrimerGrado {
+public class ejer02_ecuacionPrimerGrado {
 	/*
 	 * Realiza un programa que resuelva una ecuación de primer grado (del tipo
 	 * ax+b=0. Ejemplo 1: Este programa resuelve ecuaciones de primer grado del tipo

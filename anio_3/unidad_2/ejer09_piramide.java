@@ -2,7 +2,7 @@ package anio_3.unidad_2;
 
 import java.util.Scanner;
 
-public class ej9_piramide {
+public class ejer09_piramide {
 	/*
 	 * Escribe un programa que pinte una pirámide rellena con un carácter
 	 * introducido por teclado que podrá ser una letra, un número o los símbolos

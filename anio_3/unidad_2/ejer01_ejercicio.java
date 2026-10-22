@@ -1,7 +1,7 @@
 package anio_3.unidad_2;
 import java.util.Scanner;
 
-public class eje1_ejercicio {
+public class ejer01_ejercicio {
 /*
  * Escribe un programa que cálcule el salario semanal de un trabajador teniendo
  * en cuenta que las horas ordinarias (40 primeras horas de trabajo) se pagan a 12
