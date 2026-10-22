@@ -1,6 +1,6 @@
 package anio_3.unidad_2;
 
-public class contarHaciaAtras_19 {
+public class ejer19_contarHaciaAtras {
 /*
  * Muestra los números del 320 al 160, contando de 20 en 20 hacia atrás
  * utilizando un bucle for.

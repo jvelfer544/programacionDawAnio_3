@@ -2,7 +2,7 @@ package anio_3.unidad_2;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class ejercicio_23 {
+public class ejer23_ejercicio {
 /*
  * Escribe un programa que obtenga los números enteros comprendidos entre dos números 
  * introducidos por teclado y validados como distintos.
