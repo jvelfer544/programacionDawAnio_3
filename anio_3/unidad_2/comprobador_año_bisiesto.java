@@ -1,4 +1,4 @@
-package DAW.Anio_3;
+package anio_3.unidad_2;
 import java.util.Scanner;
 
 public class comprobador_año_bisiesto {
@@ -8,6 +8,7 @@ public class comprobador_año_bisiesto {
 
         System.out.print("Introduce un año para comprobar Si es o No bisiesto: ");
         int anio = input.nextInt();
+        
 
         boolean esBisiesto = false;
 
@@ -24,5 +25,6 @@ public class comprobador_año_bisiesto {
         }else{
             System.out.println("El año " + anio + " No es Bisiesto ");
         }
+        input.close();
     }
 }

@@ -27,6 +27,7 @@ introducir por teclado.
 		    b = siguiente;
 		}
 		
+		input.close();
 	}
 
 }

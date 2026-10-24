@@ -45,6 +45,6 @@ public class ejer9_triangulo {
 		} else {
 			System.out.println("El carácter introducido no es válido ");
 		}
+		input.close();
 	}
-
 }

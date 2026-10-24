@@ -1,4 +1,4 @@
-package DAW.Anio_3;
+package anio_3.unidad_2;
 import java.util.Scanner;
 
 public class entreHoras {
@@ -9,6 +9,7 @@ public class entreHoras {
  */
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
+        
         System.out.print("Introduce la hora de inicio: ");
         int horaInicio = sc.nextInt();
         System.out.print("Introduce los minutos de inicio: ");
@@ -34,6 +35,7 @@ public class entreHoras {
                 horaDiferencia += minutosDiferencia;
             }
         }
-
+        
+        sc.close();
     }
 }

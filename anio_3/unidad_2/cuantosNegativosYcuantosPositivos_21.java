@@ -33,5 +33,7 @@ public class cuantosNegativosYcuantosPositivos_21 {
 
 		System.out.println("Números positivos: " + contadorPositivo);
 		System.out.println("Números negativos: " + contadorNegativo);
+		
+		input.close();
 	}
 }

@@ -19,5 +19,6 @@ public class calcularTiempoCaerObjeto_3 {
 		
 		System.out.printf("El tiempo que tarda en caer un objeto desde una altura %.2f es de %.2f segundos\n", altura, tiempo);
 		
+		input.close();
 	}
 }

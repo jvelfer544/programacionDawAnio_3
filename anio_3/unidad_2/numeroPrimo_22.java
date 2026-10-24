@@ -45,6 +45,8 @@ public class numeroPrimo_22 {
 				System.out.println(num + " Si es primo ");
 				
 			}
+			
+			input.close();
 	}
 
 }

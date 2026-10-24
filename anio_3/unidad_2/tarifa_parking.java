@@ -1,4 +1,4 @@
-package DAW.Anio_3;
+package anio_3.unidad_2;
 import java.util.Scanner;
 
 public class tarifa_parking {
@@ -28,6 +28,7 @@ public class tarifa_parking {
             precio = 15.00f;
         }
             System.out.printf("El precio de los minutos euros es %.2f\n", precio);
-
+            
+            input.close();
     }
 }

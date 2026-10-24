@@ -1,4 +1,4 @@
-package DAW.Anio_3;
+package anio_3.unidad_2;
 
 import java.util.Scanner;
 
@@ -25,5 +25,7 @@ public class suma_productos_tienda {
             System.out.println("Detalles de la compra: ");
             System.out.println("La cantidad de productos comprados es: " + contProductos);
             System.out.printf("El precio total de la suma de todos los productos es: %.2f\n" , suma);
+            
+            input.close();
     }
 }

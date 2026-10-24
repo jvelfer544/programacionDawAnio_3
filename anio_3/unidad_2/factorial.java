@@ -1,4 +1,4 @@
-package DAW.Anio_3;
+package anio_3.unidad_2;
 
 import java.util.Scanner;
 
@@ -23,5 +23,7 @@ public class factorial {
             }
         }
         System.out.print(bisiesto);
+        
+        input.close();
     }
 }

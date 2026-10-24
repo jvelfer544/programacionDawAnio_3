@@ -33,5 +33,7 @@ public class diaLaSemana_ejer_15 {
 		
 		System.out.println(asignatura);
 		
+		input.close();
+		
 	}
 }

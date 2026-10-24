@@ -32,6 +32,6 @@ i)        Comprobar si una variable C de tipo char contiene un dígito. (Caráct
 				// b)      La mitad de la última cifra de un número entero A
 				
 					
-				
+				input.close();
 	}
 }

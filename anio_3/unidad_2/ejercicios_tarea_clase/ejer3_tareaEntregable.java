@@ -52,6 +52,8 @@ Respeta el formato mostrado en los ejemplos.
 
 		System.out.printf("Ha introducido %d número válidos.\n", contador);
 		System.out.println("La suma total acumulada es: " + suma);
+		
+		input.close();
 	}
 
 }

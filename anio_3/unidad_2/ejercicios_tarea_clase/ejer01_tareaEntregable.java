@@ -63,5 +63,6 @@ public class ejer01_tareaEntregable {
 
 			System.out.println(total + "€");
 		}
+		input.close();
 	}
 }

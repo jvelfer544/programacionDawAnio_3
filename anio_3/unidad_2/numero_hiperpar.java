@@ -31,6 +31,8 @@ public class numero_hiperpar {
 			} else {				
 				System.out.println("No es hyperpar");
 			}
+			
+			input.close();
 	}
 
 }

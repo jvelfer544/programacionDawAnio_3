@@ -2,7 +2,7 @@ package anio_3.unidad_2;
 
 import java.util.Scanner;
 
-public class ordenaTresNumeros_8 {
+public class ordenaTresNumeros_08 {
 	/*
 	 * Escribe un programa que ordene tres numeros enteros introducidos por teclado.
 	 */
@@ -69,5 +69,6 @@ public class ordenaTresNumeros_8 {
 //
 //		}
 
+		input.close();
 	}
 }

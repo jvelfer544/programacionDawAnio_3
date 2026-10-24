@@ -1,5 +1,4 @@
 package anio_3.unidad_2;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class ejercicio_23 {
@@ -46,5 +45,7 @@ public class ejercicio_23 {
 				System.out.println("Incluyendo los números introducidos: ");
 				System.out.print(i + " ");
 			}
+			
+			input.close();
 	}
 }

@@ -2,7 +2,7 @@ package anio_3.unidad_2;
 
 import java.util.Scanner;
 
-public class paraLaMediaNoche_6 {
+public class paraLaMediaNoche_06 {
 	/*
 	 * Escribe un programa que dada una hora determinada (horas y minutos), calcule
 	 * los segundo que faltan para llegar a la media noche.
@@ -25,6 +25,7 @@ public class paraLaMediaNoche_6 {
 		int resultado = horasMediaNoche - segMinutos;
 		
 		System.out.println(resultado + " segundos");
+		
+		input.close();
 	}
-
 }
