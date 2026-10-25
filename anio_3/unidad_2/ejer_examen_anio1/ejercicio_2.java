@@ -22,7 +22,6 @@ public class ejercicio_2 {
 				System.out.print(aux -= 1);
 				
 			}
-		
 	}
 
 }
