@@ -11,6 +11,7 @@ public class ejer01_ejercicio {
  * El sueldo semanal que le corresponde es de 432 euros
  */
 	public static void main(String[] args) {
+		
 		Scanner input = new Scanner(System.in);
 		System.out.print("Por favor, introduce el número de horas trabajadas durante la semana: ");
 		float horas = input.nextFloat();
