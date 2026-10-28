@@ -10,18 +10,22 @@ public class ejercicio_2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int aux = 100;
-		System.out.print(aux);		
+		int num = 100;
+		int contadorImpar = 0;
 		
-			while(aux > 0) {
-				System.out.print(", ");
-				System.out.print(aux -= 1);
-				System.out.print(", ");
-				System.out.print(aux -= 2);
-				System.out.print(", ");
-				System.out.print(aux -= 1);
+		System.out.print(num);		
+		
+		for(int i=99;i >= 0; i--) {
+			
+			if(i %2 != 0 && contadorImpar < 2) {
+				System.out.print(", " + i);
+				contadorImpar++;
+				
+			} else if (i %2 == 0 && contadorImpar == 2) {
+				System.out.print(", " + i);
+				contadorImpar = 0;
 				
 			}
+		}
 	}
-
 }

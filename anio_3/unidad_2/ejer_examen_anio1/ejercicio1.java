@@ -80,12 +80,12 @@ public class ejercicio1 {
 
 		String resulLm = (lm == -1) ? "NOEV" : String.valueOf(lm);
 		String resulProg = (prog == -1) ? "NOEV" : String.valueOf(prog);
-		
-		System.out.println("--------------------------------------\n"
+		 
+		System.out.println("-------------------------------------\n"
 				+ "| Calificación DAW                     	  	 |\n"
 				+ "| Módulo de Programación: " + resulProg +"    |\n"
 				+ "| Módulo de Lenguaje de Marcas: " + resulLm +"|\n"
-			    + "-X----------------------------------------------");
+			    + "--------------------------------");
 		
 		input.close();
 	}
