@@ -27,13 +27,13 @@ public class colgadasOcolgantes {
 		while(!false && aux != num) {
 			
 			System.out.print("Escribe la palabra \"colgadas o colgantes\": " );
-			cadena = input.nextLine().toLowerCase();
+			cadena = input.nextLine();
 			aux++;
 			
-			if(cadena.equals("colgadas")) {
+			if(cadena.equalsIgnoreCase("colgadas")) {
 				System.out.println("Bien");
 				
-			} else if(cadena.equals("colgantes")){
+			} else if(cadena.equalsIgnoreCase("colgantes")){
 				System.out.println("Mal");
 				
 			} else {
