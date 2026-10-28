@@ -1,4 +1,4 @@
-package anio_3.unidad_2;
+package anio_3.unidad_2.tarea_extra_navidad;
 
 import java.util.Scanner;
 
