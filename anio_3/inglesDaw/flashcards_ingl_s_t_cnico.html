@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario DAW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .flashcard-container { perspective: 1000px; }
+        .flashcard { 
+            transition: transform 0.6s; 
+            transform-style: preserve-3d; 
+            cursor: pointer;
+            position: relative;
+            width: 100%;
+            height: 250px;
+        }
+        .flashcard.flipped { transform: rotateY(180deg); }
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 0.75rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .card-front { background: white; border: 2px solid #4f46e5; color: #4f46e5; }
+        .card-back { background: #4f46e5; color: white; transform: rotateY(180deg); }
+        
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); display: none;
+            align-items: center; justify-content: center; z-index: 50;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 p-4 md:p-8 flex justify-center min-h-screen">
+
+<div class="max-w-xl w-full bg-white rounded-xl shadow-lg overflow-hidden h-fit">
+    <!-- Navegación -->
+    <div class="flex bg-slate-200">
+        <button onclick="switchTab('add')" id="tab-add" class="flex-1 py-4 font-semibold text-indigo-600 bg-white border-b-2 border-indigo-600">Añadir</button>
+        <button onclick="switchTab('list')" id="tab-list" class="flex-1 py-4 font-semibold text-slate-500 hover:text-indigo-600 transition-colors">Mis Palabras (<span id="count">0</span>)</button>
+        <button onclick="switchTab('study')" id="tab-study" class="flex-1 py-4 font-semibold text-slate-500 hover:text-indigo-600 transition-colors">Estudiar</button>
+    </div>
+
+    <!-- Pestaña: Añadir -->
+    <div id="add" class="p-6 block">
+        <h2 class="text-xl font-bold mb-4 text-indigo-600">Nueva Palabra</h2>
+        <div class="space-y-4">
+            <input type="text" id="termEn" placeholder="Término en Inglés (ej. Query)" class="w-full p-3 border border-slate-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+            <textarea id="termEs" rows="3" placeholder="Definición en Español" class="w-full p-3 border border-slate-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"></textarea>
+            <button onclick="addWord()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition-colors">Guardar Palabra</button>
+        </div>
+    </div>
+
+    <!-- Pestaña: Lista -->
+    <div id="list" class="p-6 hidden">
+        <div id="wordList" class="space-y-3 max-h-[60vh] overflow-y-auto pr-2"></div>
+    </div>
+
+    <!-- Pestaña: Estudiar -->
+    <div id="study" class="p-6 hidden">
+        <div class="flex justify-center gap-4 mb-6">
+            <button id="modeEnEs" onclick="setStudyMode('EN_ES')" class="px-4 py-2 rounded-full border-2 border-indigo-600 bg-indigo-600 text-white font-semibold text-sm transition-colors">Inglés ➔ Español</button>
+            <button id="modeEsEn" onclick="setStudyMode('ES_EN')" class="px-4 py-2 rounded-full border-2 border-indigo-600 bg-white text-indigo-600 font-semibold text-sm transition-colors">Español ➔ Inglés</button>
+        </div>
+
+        <div class="flashcard-container mb-6" onclick="flipCard()">
+            <div class="flashcard" id="flashcard">
+                <div class="card-face card-front" id="cardFront">Añade palabras primero</div>
+                <div class="card-face card-back" id="cardBack"></div>
+            </div>
+        </div>
+        
+        <div class="flex justify-between">
+            <button onclick="prevCard()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 rounded-lg font-bold transition-colors">⬅ Anterior</button>
+            <button onclick="shuffleCards()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 rounded-lg font-bold transition-colors">🔀 Mezclar</button>
+            <button onclick="nextCard()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 rounded-lg font-bold transition-colors">Siguiente ➡</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Personalizado -->
+<div class="modal-overlay" id="customModal">
+    <div class="bg-white p-6 rounded-xl shadow-2xl text-center max-w-sm w-[90%] transform transition-all">
+        <h3 id="modalTitle" class="text-xl font-bold text-slate-800 mb-2">Aviso</h3>
+        <p id="modalMsg" class="text-slate-600 mb-6">Mensaje</p>
+        <button onclick="closeModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-lg transition-colors w-full">Entendido</button>
+    </div>
+</div>
+
+<script>
+    let palabras = [];
+    let studyIndex = 0;
+    let studyMode = 'EN_ES'; 
+
+    window.onload = () => {
+        loadLocal();
+        updateUI();
+    };
+
+    function loadLocal() {
+        try {
+            const saved = localStorage.getItem('daw_vocab');
+            if (saved) palabras = JSON.parse(saved);
+        } catch (e) { console.warn("LocalStorage bloqueado."); }
+    }
+    
+    function saveLocal() {
+        try { localStorage.setItem('daw_vocab', JSON.stringify(palabras)); } 
+        catch (e) { console.error("Error guardando en LocalStorage"); }
+    }
+
+    function addWord() {
+        const en = document.getElementById('termEn').value.trim();
+        const es = document.getElementById('termEs').value.trim();
+
+        if (!en || !es) return showModal("Faltan datos", "Por favor, rellena ambos campos.");
+
+        const exists = palabras.some(p => p.en.toLowerCase() === en.toLowerCase());
+        if (exists) return showModal("Duplicado", `El término "${en}" ya existe en tu glosario.`);
+
+        palabras.unshift({ en, es });
+        saveLocal();
+        updateUI();
+        
+        document.getElementById('termEn').value = '';
+        document.getElementById('termEs').value = '';
+        showModal("¡Guardado!", "Palabra añadida correctamente.");
+    }
+
+    function deleteWord(index) {
+        palabras.splice(index, 1);
+        saveLocal();
+        updateUI();
+    }
+
+    function updateUI() {
+        document.getElementById('count').innerText = palabras.length;
+        const listDiv = document.getElementById('wordList');
+        
+        if (palabras.length === 0) {
+            listDiv.innerHTML = '<p class="text-center text-slate-500 py-4">No hay palabras guardadas aún.</p>';
+        } else {
+            listDiv.innerHTML = palabras.map((p, i) => `
+                <div class="flex justify-between items-center p-4 border border-slate-200 rounded-lg bg-slate-50">
+                    <div class="overflow-hidden">
+                        <h4 class="font-bold text-indigo-600 truncate">${p.en}</h4>
+                        <p class="text-sm text-slate-600 truncate">${p.es}</p>
+                    </div>
+                    <button onclick="deleteWord(${i})" class="ml-4 bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-md text-sm font-semibold shrink-0 transition-colors">Borrar</button>
+                </div>
+            `).join('');
+        }
+        updateCard();
+    }
+
+    function setStudyMode(mode) {
+        studyMode = mode;
+        const btnEnEs = document.getElementById('modeEnEs');
+        const btnEsEn = document.getElementById('modeEsEn');
+        
+        if (mode === 'EN_ES') {
+            btnEnEs.className = "px-4 py-2 rounded-full border-2 border-indigo-600 bg-indigo-600 text-white font-semibold text-sm transition-colors";
+            btnEsEn.className = "px-4 py-2 rounded-full border-2 border-indigo-600 bg-white text-indigo-600 font-semibold text-sm transition-colors";
+        } else {
+            btnEsEn.className = "px-4 py-2 rounded-full border-2 border-indigo-600 bg-indigo-600 text-white font-semibold text-sm transition-colors";
+            btnEnEs.className = "px-4 py-2 rounded-full border-2 border-indigo-600 bg-white text-indigo-600 font-semibold text-sm transition-colors";
+        }
+        
+        document.getElementById('flashcard').classList.remove('flipped');
+        updateCard();
+    }
+
+    function updateCard() {
+        const front = document.getElementById('cardFront');
+        const back = document.getElementById('cardBack');
+        
+        if (palabras.length === 0) {
+            front.innerText = "Glosario vacío";
+            back.innerText = "Añade términos para estudiar";
+            return;
+        }
+
+        const p = palabras[studyIndex];
+        if (studyMode === 'EN_ES') {
+            front.innerText = p.en; back.innerText = p.es;
+        } else {
+            front.innerText = p.es; back.innerText = p.en;
+        }
+    }
+
+    function flipCard() {
+        if (palabras.length > 0) document.getElementById('flashcard').classList.toggle('flipped');
+    }
+
+    function nextCard() {
+        if (palabras.length === 0) return;
+        studyIndex = (studyIndex + 1) % palabras.length;
+        document.getElementById('flashcard').classList.remove('flipped');
+        setTimeout(updateCard, 150);
+    }
+
+    function prevCard() {
+        if (palabras.length === 0) return;
+        studyIndex = (studyIndex - 1 + palabras.length) % palabras.length;
+        document.getElementById('flashcard').classList.remove('flipped');
+        setTimeout(updateCard, 150);
+    }
+
+    function shuffleCards() {
+        palabras = palabras.sort(() => Math.random() - 0.5);
+        studyIndex = 0;
+        document.getElementById('flashcard').classList.remove('flipped');
+        updateUI();
+    }
+
+    function switchTab(tabId) {
+        ['add', 'list', 'study'].forEach(id => {
+            document.getElementById(id).classList.add('hidden');
+            const btn = document.getElementById('tab-' + id);
+            btn.classList.remove('bg-white', 'border-b-2', 'border-indigo-600', 'text-indigo-600');
+            btn.classList.add('text-slate-500');
+        });
+        
+        document.getElementById(tabId).classList.remove('hidden');
+        const activeBtn = document.getElementById('tab-' + tabId);
+        activeBtn.classList.remove('text-slate-500');
+        activeBtn.classList.add('bg-white', 'border-b-2', 'border-indigo-600', 'text-indigo-600');
+        
+        if (tabId === 'study') {
+            document.getElementById('flashcard').classList.remove('flipped');
+            updateCard();
+        }
+    }
+
+    function showModal(title, msg) {
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalMsg').innerText = msg;
+        document.getElementById('customModal').style.display = 'flex';
+    }
+    
+    function closeModal() {
+        document.getElementById('customModal').style.display = 'none';
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (!document.getElementById('study').classList.contains('hidden')) {
+            if (e.key === 'ArrowRight') nextCard();
+            if (e.key === 'ArrowLeft') prevCard();
+            if (e.key === ' ' || e.key === 'Enter') {
+                e.preventDefault();
+                flipCard();
+            }
+        }
+    });
+</script>
+</body>
+</html>
