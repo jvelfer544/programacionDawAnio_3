@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocab Trainer Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="app">
+
+    <header>
+      <h2>Vocab Trainer Pro</h2>
+      <p class="subtitle">Aprende y entrena tu vocabulario</p>
+    </header>
+
+    <!-- Mensajes de estado / avisos generales -->
+    <div id="statusMessage" class="status-msg" style="display: none;"></div>
+
+    <!-- SECCIÓN DE ACCESO / LOGIN -->
+    <div id="loginSection" class="card">
+      <h3>Iniciar sesión</h3>
+      
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input id="email" type="email" placeholder="ejemplo@correo.com" autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input id="password" type="password" placeholder="Mínimo 4 caracteres" autocomplete="current-password">
+      </div>
+
+      <div class="btn-group">
+        <button id="btnLogin" type="button">Entrar</button>
+        <button id="btnRegister" type="button" class="btn-secondary">Crear cuenta</button>
+      </div>
+    </div>
+
+    <!-- SECCIÓN PRINCIPAL (USUARIO CONECTADO) -->
+    <div id="mainSection" class="card" style="display: none;">
+      
+      <!-- Barra superior de usuario -->
+      <div class="user-bar">
+        <span>Usuario: <strong id="userDisplay">...</strong></span>
+        <button id="btnLogout" type="button" class="btn-danger btn-sm">Cerrar sesión</button>
+      </div>
+
+      <!-- Pestañas de Navegación -->
+      <nav class="nav-tabs">
+        <button id="tabVocab" class="tab-btn active" type="button">📚 Mi Vocabulario</button>
+        <button id="tabPractice" class="tab-btn" type="button">🎯 Modo Práctica</button>
+      </nav>
+
+      <!-- PESTAÑA 1: GESTIÓN DE VOCABULARIO -->
+      <div id="viewVocab">
+        
+        <div class="section-block" id="formSection">
+          <h3 id="formTitle">Agregar nueva palabra</h3>
+          <div class="input-grid">
+            <input id="en" type="text" placeholder="Palabra en inglés (ej: Apple)">
+            <input id="es" type="text" placeholder="Traducción en español (ej: Manzana)">
+            <input id="cat" type="text" placeholder="Categoría (ej: Comida)">
+          </div>
+          <div class="btn-group">
+            <button id="btnAddWord" type="button">Agregar palabra</button>
+            <button id="btnCancelEdit" type="button" class="btn-secondary" style="display: none;">Cancelar edición</button>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <div class="list-header">
+            <h3>Lista de palabras</h3>
+            <span id="wordCount" class="badge">0 palabras</span>
+          </div>
+          <ul id="lista"></ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Exportar / Importar</h3>
+          <div class="btn-group">
+            <button id="btnExport" type="button" class="btn-secondary">Exportar copia (JSON)</button>
+            <label for="importFile" class="file-label btn-secondary">Importar copia (JSON)</label>
+            <input type="file" id="importFile" accept=".json" style="display: none;">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PESTAÑA 2: MODO ENTRENAMIENTO / PRÁCTICA -->
+      <div id="viewPractice" style="display: none;">
+        
+        <!-- Controles de práctica -->
+        <div class="practice-controls">
+          <label for="practiceDirection" class="label-select">Modo de práctica:</label>
+          <select id="practiceDirection">
+            <option value="en-es">🇬🇧 Inglés ➔ 🇪🇸 Español</option>
+            <option value="es-en">🇪🇸 Español ➔ 🇬🇧 Inglés</option>
+            <option value="mixed">🔀 Mixto (Ambos aleatorios)</option>
+          </select>
+          <button id="btnRestartPractice" type="button" class="btn-secondary btn-sm">🔄 Reiniciar</button>
+        </div>
+
+        <!-- Área de tarjeta interactiva -->
+        <div id="practiceArea">
+          <div class="practice-header">
+            <span id="practiceProgress" class="badge">Palabra 1 / 1</span>
+            <span id="practiceScore" class="badge">Aciertos: 0 | Fallos: 0</span>
+          </div>
+
+          <div class="practice-card">
+            <span id="practiceDirectionLabel" class="practice-tag">Traduce al Español:</span>
+            <h4 id="promptWord">Palabra</h4>
+            <span id="promptCategory" class="word-cat">general</span>
+          </div>
+
+          <div class="form-group">
+            <input id="practiceAnswerInput" type="text" placeholder="Escribe aquí tu traducción..." autocomplete="off">
+          </div>
+
+          <div id="practiceFeedback" class="feedback-msg" style="display: none;"></div>
+
+          <div class="btn-group">
+            <button id="btnCheckAnswer" type="button">Comprobar respuesta</button>
+            <button id="btnNextWord" type="button" class="btn-next" style="display: none;">Siguiente palabra ➔</button>
+            <button id="btnSkipWord" type="button" class="btn-secondary">Saltar / Ver solución</button>
+          </div>
+        </div>
+
+        <!-- Mensaje si no hay palabras suficientes -->
+        <div id="practiceEmpty" class="empty-state" style="display: none;">
+          <p>⚠️ No tienes palabras guardadas todavía.<br>Agrega al menos una palabra en la pestaña <strong>"Mi Vocabulario"</strong> para poder practicar.</p>
+        </div>
+
+        <!-- Resumen final de ronda -->
+        <div id="practiceSummary" class="round-summary" style="display: none;">
+          <h4>🎉 ¡Ronda completada!</h4>
+          <p id="summaryScoreText">Has practicado todas tus palabras.</p>
+          <button id="btnPlayAgain" type="button">Practicar de nuevo</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
