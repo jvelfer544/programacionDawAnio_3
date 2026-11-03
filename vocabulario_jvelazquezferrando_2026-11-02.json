@@ -1,1 +1,892 @@
-
+[
+  {
+    "en": "i must be ...",
+    "es": "yo tengo que ...",
+    "cat": "talking about skills",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "it's important to ...",
+    "es": "es importante ...",
+    "cat": "talking about skills",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "i need to know how do ...",
+    "es": "necesito saber como hacerlo ...",
+    "cat": "talking about skills",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "i have to be good at ...",
+    "es": "yo tengo que ser bueno en ...",
+    "cat": "talking about skills",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "i deal with ...",
+    "es": "yo trato con ...",
+    "cat": "talking about responsibilities",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "i take care of ...",
+    "es": "yo cuido de ...",
+    "cat": "talking about responsibilities",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "i'm responsible for .....",
+    "es": "yo soy responsable de ....",
+    "cat": "talking about responsibilities",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "provide",
+    "es": "proporcionar",
+    "cat": "verbo",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "web designer",
+    "es": "diseñador web",
+    "cat": "jobs",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "support technician",
+    "es": "agente de asistencia técnica",
+    "cat": "jobs",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "software tester",
+    "es": "probador de programas",
+    "cat": "jobs",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "programmer",
+    "es": "programador",
+    "cat": "jobs",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "network administrator",
+    "es": "administrador de redes",
+    "cat": "jobs",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "helpdesk technician",
+    "es": "técnico de servicio al cliente",
+    "cat": "jobs",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "application develper",
+    "es": "desarrollador de aplicaciones",
+    "cat": "jobs",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "ai training assistant",
+    "es": "asistente de entrenamiento",
+    "cat": "jobs",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "troubleshoot",
+    "es": "identificar y solucionar un problema",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "test",
+    "es": "probar",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "start up",
+    "es": "encendido / arranque",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "solve",
+    "es": "solucionar / resolver",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "problem - solving",
+    "es": "resolución de problemas",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "operate",
+    "es": "manejar / hacer funcionar",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "maintain",
+    "es": "realizar / hacer mantenimiento",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "install",
+    "es": "instalar",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "input",
+    "es": "introducir",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "give",
+    "es": "dar",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "download",
+    "es": "descargar",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "design",
+    "es": "diseño / diseñar",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "check",
+    "es": "comprobar",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "assamble",
+    "es": "esanblar /montar",
+    "cat": "it",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "transport",
+    "es": "sector del transporte",
+    "cat": "business sectors",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "manufacturing",
+    "es": "sector industrial",
+    "cat": "business sectors",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "hospitality and leisure /lesher/",
+    "es": "hoteleria y ocio",
+    "cat": "business sectors",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "healt /helz/",
+    "es": "sector sanitario",
+    "cat": "business sectors",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "education /edukeishon/",
+    "es": "sector educativo",
+    "cat": "business sectors",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "banking",
+    "es": "sector bancario",
+    "cat": "business sectors",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "system unit",
+    "es": "torre",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "software",
+    "es": "programas",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "server",
+    "es": "servidor",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "mouse",
+    "es": "ratón",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "monitor / screens",
+    "es": "monitor",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "laptop /lapto/",
+    "es": "portatil",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "keyboard /kybord/",
+    "es": "teclado",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "hardware",
+    "es": "equipo",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "data /deita/",
+    "es": "datos",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "artificial intelligence /ei ai/",
+    "es": "inteligencia artificial",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "apps",
+    "es": "aplicaciones",
+    "cat": "vocabulary",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "unscrew",
+    "es": "desatornillar",
+    "cat": "verbo",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "unplug",
+    "es": "desenchufar",
+    "cat": "verbos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "turn off",
+    "es": "apagar",
+    "cat": "verbos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "screw",
+    "es": "atornillar",
+    "cat": "verbos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "remove",
+    "es": "eliminar, quitar, extraer",
+    "cat": "verbos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "plug in",
+    "es": "enchufar / complementos (no verbo)",
+    "cat": "verbos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "insert",
+    "es": "insertar",
+    "cat": "verbos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "disconnect",
+    "es": "desconectar",
+    "cat": "verbos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "detach",
+    "es": "separar / soltar / quitar / extraer / desjuntar",
+    "cat": "verbos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "connect",
+    "es": "conectar",
+    "cat": "verbos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "attach",
+    "es": "sujetar / fijar / juntar / adjuntar",
+    "cat": "verbos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "useless",
+    "es": "inútil",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "slow",
+    "es": "lento",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 1
+    }
+  },
+  {
+    "en": "narrow",
+    "es": "estrecho",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "little",
+    "es": "pequeño",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "long",
+    "es": "largo",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "useful",
+    "es": "útil",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "quiet",
+    "es": "silencioso/a",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "lud",
+    "es": "ruidoso",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "light",
+    "es": "ligero / claro",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "large",
+    "es": "grande",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "heavy",
+    "es": "pesado",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "fast",
+    "es": "rápido",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "expensive",
+    "es": "caro",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "cheap",
+    "es": "barato",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "basic",
+    "es": "basico/a",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "avanced",
+    "es": "avanzado/a",
+    "cat": "adjetivos",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "usb port",
+    "es": "puerto de usb",
+    "cat": "parts of computer",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "solid state drive (ssd)",
+    "es": "unidad de estado sólido",
+    "cat": "parts of computer",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "ram chip",
+    "es": "chip de memoria ram",
+    "cat": "parts of computer",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "processor (cpu)",
+    "es": "procesador",
+    "cat": "parts of computer",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "power supply uni (psu)",
+    "es": "fuente de alimentación",
+    "cat": "parts of computer",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "motherboard",
+    "es": "placa base",
+    "cat": "parts of computer",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "heat sink",
+    "es": "disipador térmico",
+    "cat": "parts of computer",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "graphics card",
+    "es": "tarjeta grafica",
+    "cat": "parts of computer",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "fan",
+    "es": "ventilador",
+    "cat": "parts of computer",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "switch",
+    "es": "interruptor",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "socket",
+    "es": "enchufe / conector",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "slot",
+    "es": "ranura",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "front panel",
+    "es": "panel frontal",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "network card",
+    "es": "tarjeta de red",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "case",
+    "es": "carcasa / chasis",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  }
+]
