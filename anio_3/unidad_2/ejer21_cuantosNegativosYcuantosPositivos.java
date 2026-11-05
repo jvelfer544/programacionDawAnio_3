@@ -33,5 +33,7 @@ public class ejer21_cuantosNegativosYcuantosPositivos {
 
 		System.out.println("Números positivos: " + contadorPositivo);
 		System.out.println("Números negativos: " + contadorNegativo);
+		
+		input.close();
 	}
 }

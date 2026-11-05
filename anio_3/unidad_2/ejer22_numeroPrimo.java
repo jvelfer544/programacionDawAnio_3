@@ -45,6 +45,8 @@ public class ejer22_numeroPrimo {
 				System.out.println(num + " Si es primo ");
 				
 			}
+			
+			input.close();
 	}
 
 }

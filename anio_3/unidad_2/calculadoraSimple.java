@@ -74,5 +74,6 @@ public class calculadoraSimple {
 				}
 			}
 		}
+		input.close();
 	}
 }

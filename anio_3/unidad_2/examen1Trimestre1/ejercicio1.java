@@ -46,7 +46,7 @@ public class ejercicio1 {
 					prog = input.nextDouble();
 
 					if (!(prog >= 0 && prog <= 10)) {
-						System.out.println("La nota introducida no es correcta");
+						System.err.println("La nota introducida no es correcta");
 					}
 
 				} else {
@@ -54,7 +54,7 @@ public class ejercicio1 {
 					bd = input.nextDouble();
 
 					if (!(bd >= 0 && bd <= 10)) {
-						System.out.println("La nota introducida no es correcta");
+						System.err.println("La nota introducida no es correcta");
 					}
 
 				}
@@ -63,24 +63,24 @@ public class ejercicio1 {
 				salir = true;
 
 			} else {
-				System.out.println("Error, vuelve ha intentarlo");
+				System.err.println("Error, vuelve ha intentarlo");
 			}
-			
-
 		}
 
 		System.out.println("--------------------");
 
-		if (salir) {			
+			
 			lm1 = String.valueOf(lm);
 			if(lm1.equals("")) {
 				lm1 = "NOEV";
 			}
-			prog1 = String.valueOf(lm);
+			
+			prog1 = String.valueOf(prog);
 			if(prog1.equals("")) {
 				prog1 = "NOEV";
 			}
-			bd1 = String.valueOf(lm);
+			
+			bd1 = String.valueOf(bd);
 			if(bd1.equals("")) {
 				bd1 = "NOEV";
 			}
@@ -90,9 +90,8 @@ public class ejercicio1 {
 			System.out.println("Lenguaje de Marcas : " + lm1);
 			System.out.println("Programacion: " + prog);
 			System.out.println("Base de Datos: " + bd);
-		}
 		
-		input.close();
+		
 	}
 
 }
