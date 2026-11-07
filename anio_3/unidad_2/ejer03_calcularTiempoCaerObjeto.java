@@ -2,7 +2,7 @@ package anio_3.unidad_2;
 
 import java.util.Scanner;
 
-public class calcularTiempoCaerObjeto_3 {
+public class ejer03_calcularTiempoCaerObjeto {
 	/*
 	 * Realiza un programa que calcule el tiempo que tardará en caer un objeto desde
 	 * una altura h. Aplica la formula t=raiz cuadrada de 2*h/g siendo gramos =

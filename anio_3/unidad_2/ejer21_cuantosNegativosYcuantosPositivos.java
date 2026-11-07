@@ -2,7 +2,7 @@ package anio_3.unidad_2;
 
 import java.util.Scanner;
 
-public class cuantosNegativosYcuantosPositivos_21 {
+public class ejer21_cuantosNegativosYcuantosPositivos {
 	/*
 	 * Escribe un programa que lea una lista de diez númeos y determine cuántos son
 	 * positivos, y cuantos son negativos.

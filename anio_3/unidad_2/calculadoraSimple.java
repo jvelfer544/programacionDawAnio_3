@@ -18,7 +18,7 @@ public class calculadoraSimple {
 		while (!salir) {
 			System.out.println("Elige la opcion: ");
 			int menu = input.nextInt();
-			
+
 			if (menu == 0) {
 				salir = true;
 
