@@ -5,28 +5,34 @@ import java.util.Scanner;
 public class esPalindromo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub		
 		Scanner input = new Scanner(System.in);
-		
-		System.out.println("Introduce una cadena para comprobar si es palíndromo: ");
-		String cadena = input.nextLine().trim();
-		
-		String cadenaInvertida = cadena.replace(" ", "");
-		
-		
-		for(int i=cadena.length()-1; i >= 0; i--) {
-	
-			char car = cadena.charAt(i);
+		System.out.print("Introduce una cadena: ");
+		String cadena = input.nextLine().trim().toLowerCase();
 
-		}
-		System.out.println(cadenaInvertida);
-			if(cadena.equalsIgnoreCase(cadenaInvertida)) {
-				System.out.println("Si es Palíndromo");
-			} else {
-				System.out.println("No es Palíndromo");
+		boolean esPalindromo = true;
+		int indice = 0;
+		
+		String cadenaSinEspacios = cadena.replaceAll("\\s+", "");
+
+		while (esPalindromo && indice < cadenaSinEspacios.length() /2) {
+			char car = cadenaSinEspacios.charAt(indice);
+
+			if (car != (cadenaSinEspacios.charAt(cadenaSinEspacios.length() -1 -indice))) {
+				esPalindromo = false;
+				
 			}
+
+			indice++;
+		}
 		
-		
+		if(esPalindromo) {
+			System.out.println("Si es Palíndromo");
+			
+		} else {
+			System.out.println("No es Palíndromo");
+			
+		}
 	}
 
 }

@@ -7,6 +7,20 @@ public class prueba {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
-	}
+		System.out.println("Introduce una cadena: ");
+		String frase = input.nextLine().trim().toLowerCase();
+		boolean esHeterograma = true;
+		
+		String fraseSinEspacios = frase.replaceAll("\\s+","");
+		int indice = 0;
+		
+		while(indice < fraseSinEspacios.length() && esHeterograma) {
+			
+			
+			
+			indice++;
+		}
+		
 
+	}
 }
