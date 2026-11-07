@@ -1,7 +1,29 @@
 // ==========================================
 // VOCAB TRAINER PRO - VERSIÓN LOCAL (LOCALSTORAGE)
-// Con modo práctica (EN->ES, ES->EN, Mixto) y prevención de duplicados
+// Con edición de palabras, modo práctica (EN->ES, ES->EN, Mixto) y prevención de duplicados
 // ==========================================
+
+// Limpieza automática inmediata de cualquier resto de conflicto de Git en el DOM
+(function cleanGitConflictArtifacts() {
+  function clean() {
+    const walker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_TEXT);
+    const toRemove = [];
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      if (node.nodeValue && (node.nodeValue.includes("<<<<<<<") || node.nodeValue.includes(">>>>>>>") || node.nodeValue.includes("======="))) {
+        toRemove.push(node);
+      }
+    }
+    toRemove.forEach(n => n.remove());
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", clean);
+  } else {
+    clean();
+  }
+  // Ejecutar también tras medio segundo por si algún contenido tardó en montarse
+  setTimeout(clean, 500);
+})();
 
 const USERS_KEY = "vocab_app_users";
 const SESSION_KEY = "vocab_app_session";
@@ -28,11 +50,13 @@ const tabPractice = document.getElementById("tabPractice");
 const viewVocab = document.getElementById("viewVocab");
 const viewPractice = document.getElementById("viewPractice");
 
-// Elementos - Gestión de Vocabulario
+// Elementos - Formulario y Gestión de Vocabulario
+const formTitle = document.getElementById("formTitle");
 const enInput = document.getElementById("en");
 const esInput = document.getElementById("es");
 const catInput = document.getElementById("cat");
 const btnAddWord = document.getElementById("btnAddWord");
+const btnCancelEdit = document.getElementById("btnCancelEdit");
 const lista = document.getElementById("lista");
 const wordCount = document.getElementById("wordCount");
 const btnExport = document.getElementById("btnExport");
@@ -61,6 +85,7 @@ const summaryScoreText = document.getElementById("summaryScoreText");
 
 // Estado global de la aplicación
 let currentUser = null;
+let editingWordId = null; // ID de la palabra en edición (o null si se está agregando una nueva)
 
 // Estado del modo práctica
 let practiceQueue = [];
@@ -92,6 +117,7 @@ function mostrarSeccionPrincipal() {
   mainSection.style.display = "block";
   userDisplay.textContent = currentUser.email;
   hideStatus();
+  cancelEdit();
   switchTab("vocab");
   cargarPalabras();
 }
@@ -101,6 +127,7 @@ function mostrarSeccionLogin() {
   mainSection.style.display = "none";
   userDisplay.textContent = "";
   lista.innerHTML = "";
+  cancelEdit();
   hideStatus();
 }
 
@@ -116,6 +143,7 @@ function switchTab(tab) {
     viewPractice.style.display = "none";
     cargarPalabras();
   } else if (tab === "practice") {
+    if (editingWordId) cancelEdit();
     tabPractice.classList.add("active");
     tabVocab.classList.remove("active");
     viewPractice.style.display = "block";
@@ -208,7 +236,7 @@ function logout() {
 }
 
 // ==========================================
-// 4. GESTIÓN DE PALABRAS Y PREVENCIÓN DE DUPLICADOS
+// 4. GESTIÓN DE PALABRAS (AGREGAR, EDITAR, ELIMINAR)
 // ==========================================
 function getWords() {
   if (!currentUser) return [];
@@ -230,7 +258,8 @@ function updateWordInStorage(updatedWord) {
   }
 }
 
-function addWord() {
+// Agregar nueva palabra o Guardar edición existente
+function saveWord() {
   if (!currentUser) return;
 
   const en = enInput.value.trim().toLowerCase();
@@ -245,43 +274,89 @@ function addWord() {
   const words = getWords();
 
   // CONTROL ESTRICTO DE DUPLICADOS:
-  // 1. Comprobar si ya existe la palabra en inglés
-  const duplicateEn = words.find(w => w.en === en);
+  // Se ignora la palabra que se está editando para permitir modificar otros campos
+  const duplicateEn = words.find(w => w.en === en && w.id !== editingWordId);
   if (duplicateEn) {
-    showStatus(`La palabra en inglés "${en}" ya está registrada (traducida como "${duplicateEn.es}").`, "error");
+    showStatus(`La palabra en inglés "${en}" ya está registrada en otra entrada (traducida como "${duplicateEn.es}").`, "error");
     enInput.focus();
     return;
   }
 
-  // 2. Comprobar si ya existe la traducción en español
-  const duplicateEs = words.find(w => w.es === es);
+  const duplicateEs = words.find(w => w.es === es && w.id !== editingWordId);
   if (duplicateEs) {
-    showStatus(`La palabra en español "${es}" ya está registrada (para "${duplicateEs.en}").`, "error");
+    showStatus(`La palabra en español "${es}" ya está registrada en otra entrada (para "${duplicateEs.en}").`, "error");
     esInput.focus();
     return;
   }
 
-  const nuevaPalabra = {
-    id: "w_" + Date.now() + "_" + Math.random().toString(36).substring(2, 6),
-    en,
-    es,
-    cat,
-    createdAt: Date.now(),
-    level: 0,
-    stats: { correct: 0, wrong: 0 }
-  };
+  if (editingWordId) {
+    // MODO EDICIÓN: Actualizar palabra existente
+    const wordIndex = words.findIndex(w => w.id === editingWordId);
+    if (wordIndex !== -1) {
+      words[wordIndex].en = en;
+      words[wordIndex].es = es;
+      words[wordIndex].cat = cat;
+      saveWords(words);
+      showStatus(`¡Palabra "${en}" actualizada correctamente!`, "success", 2500);
+    }
+    cancelEdit();
+  } else {
+    // MODO CREACIÓN: Agregar nueva palabra
+    const nuevaPalabra = {
+      id: "w_" + Date.now() + "_" + Math.random().toString(36).substring(2, 6),
+      en,
+      es,
+      cat,
+      createdAt: Date.now(),
+      level: 0,
+      stats: { correct: 0, wrong: 0 }
+    };
 
-  words.unshift(nuevaPalabra);
-  saveWords(words);
+    words.unshift(nuevaPalabra);
+    saveWords(words);
 
-  // Limpiar campos y enfocar
+    enInput.value = "";
+    esInput.value = "";
+    catInput.value = "";
+    enInput.focus();
+
+    showStatus(`¡"${en}" agregada a tu vocabulario!`, "success", 2500);
+  }
+
+  cargarPalabras();
+}
+
+// Iniciar edición de una palabra
+function startEditWord(id) {
+  const words = getWords();
+  const word = words.find(w => w.id === id);
+  if (!word) return;
+
+  editingWordId = id;
+  enInput.value = word.en;
+  esInput.value = word.es;
+  catInput.value = word.cat || "";
+
+  formTitle.textContent = "✏️ Editar palabra";
+  btnAddWord.textContent = "💾 Guardar cambios";
+  btnCancelEdit.style.display = "inline-block";
+
+  enInput.focus();
+  cargarPalabras();
+}
+
+// Cancelar edición y volver al modo de agregar
+function cancelEdit() {
+  editingWordId = null;
   enInput.value = "";
   esInput.value = "";
   catInput.value = "";
-  enInput.focus();
+
+  formTitle.textContent = "Agregar nueva palabra";
+  btnAddWord.textContent = "Agregar palabra";
+  btnCancelEdit.style.display = "none";
 
   cargarPalabras();
-  showStatus(`¡"${en}" agregada a tu vocabulario!`, "success", 2500);
 }
 
 function cargarPalabras() {
@@ -299,6 +374,9 @@ function cargarPalabras() {
 
   words.forEach(p => {
     const li = document.createElement("li");
+    if (p.id === editingWordId) {
+      li.classList.add("editing");
+    }
 
     li.innerHTML = `
       <div class="word-content">
@@ -307,21 +385,28 @@ function cargarPalabras() {
         <span class="word-trans">${escapeHTML(p.es)}</span>
         <span class="word-cat">${escapeHTML(p.cat || 'general')}</span>
       </div>
+      <div class="word-actions">
+        <button class="btn-edit" title="Editar esta palabra">✏️</button>
+        <button class="btn-delete" title="Eliminar esta palabra">✕</button>
+      </div>
     `;
 
-    const btnDel = document.createElement("button");
-    btnDel.className = "btn-delete";
-    btnDel.textContent = "✕";
-    btnDel.title = "Eliminar esta palabra";
+    const btnEdit = li.querySelector(".btn-edit");
+    btnEdit.addEventListener("click", () => startEditWord(p.id));
+
+    const btnDel = li.querySelector(".btn-delete");
     btnDel.addEventListener("click", () => deleteWord(p.id));
 
-    li.appendChild(btnDel);
     lista.appendChild(li);
   });
 }
 
 function deleteWord(id) {
   if (!confirm("¿Deseas eliminar esta palabra de tu lista?")) return;
+
+  if (editingWordId === id) {
+    cancelEdit();
+  }
 
   let words = getWords();
   words = words.filter(w => w.id !== id);
@@ -645,7 +730,8 @@ btnLogout.addEventListener("click", logout);
 tabVocab.addEventListener("click", () => switchTab("vocab"));
 tabPractice.addEventListener("click", () => switchTab("practice"));
 
-btnAddWord.addEventListener("click", addWord);
+btnAddWord.addEventListener("click", saveWord);
+btnCancelEdit.addEventListener("click", cancelEdit);
 btnExport.addEventListener("click", exportar);
 importFileInput.addEventListener("change", importar);
 
@@ -659,9 +745,9 @@ btnPlayAgain.addEventListener("click", () => iniciarModoPractica());
 // Manejo inteligente de la tecla ENTER
 emailInput.addEventListener("keydown", (e) => { if (e.key === "Enter") login(); });
 passwordInput.addEventListener("keydown", (e) => { if (e.key === "Enter") login(); });
-enInput.addEventListener("keydown", (e) => { if (e.key === "Enter") addWord(); });
-esInput.addEventListener("keydown", (e) => { if (e.key === "Enter") addWord(); });
-catInput.addEventListener("keydown", (e) => { if (e.key === "Enter") addWord(); });
+enInput.addEventListener("keydown", (e) => { if (e.key === "Enter") saveWord(); });
+esInput.addEventListener("keydown", (e) => { if (e.key === "Enter") saveWord(); });
+catInput.addEventListener("keydown", (e) => { if (e.key === "Enter") saveWord(); });
 
 practiceAnswerInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {

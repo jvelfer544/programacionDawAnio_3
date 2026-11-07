@@ -3,10 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>Vocab Trainer Pro</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.1">
 </head>
 <body>
+  <script>
+    // Limpieza inmediata en el primer milisegundo de ejecución del body
+    (function() {
+      function purge() {
+        if (!document.body) return;
+        Array.from(document.body.childNodes).forEach(n => {
+          if (n.nodeType === 3 && (n.nodeValue.includes("<<<<") || n.nodeValue.includes(">>>>") || n.nodeValue.includes("===="))) {
+            n.remove();
+          }
+        });
+      }
+      purge();
+      document.addEventListener("DOMContentLoaded", purge);
+    })();
+  </script>
 
   <div id="app">
 
@@ -146,7 +164,7 @@
 
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=2.1"></script>
 
 </body>
 </html>
