@@ -11,12 +11,18 @@ public class prueba {
 		String frase = input.nextLine().trim().toLowerCase();
 		boolean esHeterograma = true;
 		
+		String abecedario = "[a-zñáéíóúü]";
 		String fraseSinEspacios = frase.replaceAll("\\s+","");
 		int indice = 0;
 		
 		while(indice < fraseSinEspacios.length() && esHeterograma) {
 			
+			char car = fraseSinEspacios.charAt(indice);
+			String letra = String.valueOf(car);
 			
+			if(letra.indexOf(fraseSinEspacios)) {
+				
+			}
 			
 			indice++;
 		}
