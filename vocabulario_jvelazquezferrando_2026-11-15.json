@@ -1,12 +1,212 @@
 [
   {
+    "en": "several",
+    "es": "varios",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "trusht",
+    "es": "confianza",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "trash",
+    "es": "basura",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "arrow",
+    "es": "fecha",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "complain",
+    "es": "quejarse",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "remain",
+    "es": "permanecer",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "mind",
+    "es": "mente",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "share",
+    "es": "compartir",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "delivers",
+    "es": "entrega",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "waste material",
+    "es": "material de deshecho",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "waste",
+    "es": "desperdiciar",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "headline",
+    "es": "el titular",
+    "cat": "general",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "support",
+    "es": "apoyo",
+    "cat": "infotmatica",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "tabs",
+    "es": "pestañas",
+    "cat": "informatica",
+    "level": 0,
+    "stats": {
+      "correct": 1,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "back up",
+    "es": "copias de seguridad",
+    "cat": "informatica",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 1
+    }
+  },
+  {
+    "en": "upgrade",
+    "es": "actualizar",
+    "cat": "programación",
+    "level": 0,
+    "stats": {
+      "correct": 1,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "explain",
+    "es": "explicar",
+    "cat": "vocabulary of english",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 1
+    }
+  },
+  {
+    "en": "below",
+    "es": "a continuación",
+    "cat": "vocabulary of english",
+    "level": 0,
+    "stats": {
+      "correct": 0,
+      "wrong": 1
+    }
+  },
+  {
+    "en": "itmes",
+    "es": "elementos",
+    "cat": "programcación",
+    "level": 0,
+    "stats": {
+      "correct": 1,
+      "wrong": 0
+    }
+  },
+  {
+    "en": "split",
+    "es": "dividir",
+    "cat": "programación",
+    "level": 0,
+    "stats": {
+      "correct": 1,
+      "wrong": 0
+    }
+  },
+  {
     "en": "i must be ...",
     "es": "yo tengo que ...",
     "cat": "talking about skills",
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -15,8 +215,8 @@
     "cat": "talking about skills",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
@@ -26,7 +226,7 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -35,8 +235,8 @@
     "cat": "talking about skills",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -46,7 +246,7 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -55,7 +255,7 @@
     "cat": "talking about responsibilities",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -66,7 +266,7 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -75,8 +275,8 @@
     "cat": "verbo",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -85,7 +285,7 @@
     "cat": "jobs",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -96,7 +296,7 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -105,8 +305,8 @@
     "cat": "jobs",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
@@ -115,7 +315,7 @@
     "cat": "jobs",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -125,8 +325,8 @@
     "cat": "jobs",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 1,
+      "wrong": 3
     }
   },
   {
@@ -136,7 +336,7 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -145,7 +345,7 @@
     "cat": "jobs",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -155,8 +355,8 @@
     "cat": "jobs",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
@@ -166,7 +366,7 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -175,8 +375,8 @@
     "cat": "it",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 1,
+      "wrong": 3
     }
   },
   {
@@ -186,47 +386,47 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
     "en": "solve",
-    "es": "solucionar / resolver",
+    "es": "solucionar",
     "cat": "it",
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 5
     }
   },
   {
-    "en": "problem - solving",
+    "en": "problem  solving",
     "es": "resolución de problemas",
     "cat": "it",
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
     "en": "operate",
-    "es": "manejar / hacer funcionar",
+    "es": "hacer funcionar",
     "cat": "it",
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
     "en": "maintain",
-    "es": "realizar / hacer mantenimiento",
+    "es": "realizar mantenimiento",
     "cat": "it",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
@@ -235,7 +435,7 @@
     "cat": "it",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -245,8 +445,8 @@
     "cat": "general",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -255,7 +455,7 @@
     "cat": "it",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -265,7 +465,7 @@
     "cat": "it",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -275,8 +475,8 @@
     "cat": "it",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
@@ -285,18 +485,18 @@
     "cat": "it",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
   {
     "en": "assamble",
-    "es": "esanblar /montar",
+    "es": "esanblar / montar",
     "cat": "it",
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -305,7 +505,7 @@
     "cat": "business sectors",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -315,38 +515,38 @@
     "cat": "business sectors",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
-    "en": "hospitality and leisure /lesher/",
-    "es": "hoteleria y ocio",
+    "en": "hospitality and leisure",
+    "es": "hosteleria y ocio",
     "cat": "business sectors",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
-    "en": "healt /helz/",
+    "en": "health",
     "es": "sector sanitario",
     "cat": "business sectors",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
-    "en": "education /edukeishon/",
+    "en": "education",
     "es": "sector educativo",
     "cat": "business sectors",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
@@ -355,7 +555,7 @@
     "cat": "business sectors",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -365,7 +565,7 @@
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -375,8 +575,8 @@
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -385,7 +585,7 @@
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -395,37 +595,37 @@
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
   {
-    "en": "monitor / screens",
+    "en": "monitor",
     "es": "monitor",
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
   {
-    "en": "laptop /lapto/",
+    "en": "laptop",
     "es": "portatil",
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
   {
-    "en": "keyboard /kybord/",
+    "en": "keyboard",
     "es": "teclado",
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -435,27 +635,27 @@
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
-    "en": "data /deita/",
+    "en": "data",
     "es": "datos",
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
   {
-    "en": "artificial intelligence /ei ai/",
+    "en": "artificial intelligence",
     "es": "inteligencia artificial",
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -465,7 +665,7 @@
     "cat": "vocabulary",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -475,7 +675,7 @@
     "cat": "verbo",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -485,8 +685,8 @@
     "cat": "verbos",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -495,7 +695,7 @@
     "cat": "verbos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -505,28 +705,28 @@
     "cat": "verbos",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
     "en": "remove",
-    "es": "eliminar, quitar, extraer",
+    "es": "eliminar, extraer",
     "cat": "verbos",
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
     "en": "plug in",
-    "es": "enchufar / complementos (no verbo)",
+    "es": "enchufar",
     "cat": "verbos",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
@@ -535,7 +735,7 @@
     "cat": "verbos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -545,18 +745,18 @@
     "cat": "verbos",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
     "en": "detach",
-    "es": "separar / soltar / quitar / extraer / desjuntar",
+    "es": "soltar / quitar / extraer / desjuntar",
     "cat": "verbos",
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -565,7 +765,7 @@
     "cat": "verbos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -576,7 +776,7 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -585,7 +785,7 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -595,7 +795,7 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 1
     }
   },
@@ -605,7 +805,7 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -615,7 +815,7 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -625,7 +825,7 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -635,7 +835,7 @@
     "cat": "general",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -645,8 +845,8 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -655,8 +855,8 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -665,8 +865,8 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -675,7 +875,7 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -685,8 +885,8 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -695,7 +895,7 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -705,7 +905,7 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -715,7 +915,7 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -725,8 +925,8 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
@@ -735,8 +935,8 @@
     "cat": "adjetivos",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 1,
+      "wrong": 3
     }
   },
   {
@@ -746,7 +946,7 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -755,8 +955,8 @@
     "cat": "parts of computer",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -765,8 +965,8 @@
     "cat": "parts of computer",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 1,
+      "wrong": 3
     }
   },
   {
@@ -775,7 +975,7 @@
     "cat": "parts of computer",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -785,7 +985,7 @@
     "cat": "parts of computer",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -795,7 +995,7 @@
     "cat": "parts of computer",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -805,8 +1005,8 @@
     "cat": "parts of computer",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 2,
+      "wrong": 2
     }
   },
   {
@@ -815,7 +1015,7 @@
     "cat": "parts of computer",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -825,7 +1025,7 @@
     "cat": "parts of computer",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -835,7 +1035,7 @@
     "cat": "general",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -846,7 +1046,7 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   },
   {
@@ -855,7 +1055,7 @@
     "cat": "general",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -865,7 +1065,7 @@
     "cat": "general",
     "level": 0,
     "stats": {
-      "correct": 0,
+      "correct": 4,
       "wrong": 0
     }
   },
@@ -875,8 +1075,8 @@
     "cat": "general",
     "level": 0,
     "stats": {
-      "correct": 0,
-      "wrong": 0
+      "correct": 3,
+      "wrong": 1
     }
   },
   {
@@ -886,7 +1086,7 @@
     "level": 0,
     "stats": {
       "correct": 0,
-      "wrong": 0
+      "wrong": 4
     }
   }
 ]
