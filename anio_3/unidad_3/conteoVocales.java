@@ -10,9 +10,9 @@ public class conteoVocales {
 	 * (á, é, í, ó, ú, ü).
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
-		System.out.print("Introduce un cadena: ");
+		
+		System.out.println("Introduce una cadena para contar las vocales: ");
 		String cadena = input.nextLine().trim().toLowerCase();
 
 		int contador = 0;
@@ -35,6 +35,13 @@ public class conteoVocales {
 
 			System.out.println("No hay vocales en la cadena " + cadena);
 		}
+	
+		if (contador > 0) {
+			System.out.println("El número de vocales es " + contador);
+		} else {
+			System.out.println("La cadena introducida no tiene vocales");
+		}
+		
+		input.close();
 	}
-
 }

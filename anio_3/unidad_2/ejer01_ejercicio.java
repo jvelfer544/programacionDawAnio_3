@@ -21,7 +21,6 @@ public class ejer01_ejercicio {
 		
 		float sueldo = 0;
 		
-		input.close();
 		
 		if(horas < 0) {
 			System.out.println("El número de horas introducida no es válida ");
@@ -39,5 +38,6 @@ public class ejer01_ejercicio {
 				}
 		}
 			System.out.println("El sueldo semana que le corresponde es de " + sueldo + " euros");
+			input.close();
 	}
 }
