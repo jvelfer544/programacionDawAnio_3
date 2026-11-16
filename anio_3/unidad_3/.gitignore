@@ -1,6 +1,14 @@
 /esPalindromo.class
 /esHeterograma.class
 /prueba.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/practica.class
+/conteoVocales.class
+/fullVocal.class
+=======
+>>>>>>> d45a204e835cd1fb606cf9108b8e6d1d9661aa24
 /conteoVocales.class
 /tieneTodasLasVocales.class
 /fullVocal.class
@@ -8,5 +16,18 @@
 /PalabraLargaCortaCaracteres.class
 /fullVocalica.class
 /FullVocalica_2.class
+<<<<<<< HEAD
 /FullVocalica.class
 /EsAnagrama.class
+=======
+>>>>>>> e88335a3b97e2f3104af22dfd1b56ad946bc9485
+/FullVocalica.class
+/EsAnagrama.class
+/FuncionEsAnagrama.class
+/Palabra.class
+/PalabraCortaLargaSplit.class
+/funcionPalabraCortaLargaSplit.class
+>>>>>>> d45a204e835cd1fb606cf9108b8e6d1d9661aa24
+/concatenarCadenas.class
+/ulilidadesFunciones.class
+/utilidadesFunciones.class

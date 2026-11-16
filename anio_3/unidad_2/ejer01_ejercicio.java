@@ -2,7 +2,6 @@ package anio_3.unidad_2;
 import java.util.Scanner;
 
 public class ejer01_ejercicio {
-
 /*
  * Escribe un programa que cálcule el salario semanal de un trabajador teniendo
  * en cuenta que las horas ordinarias (40 primeras horas de trabajo) se pagan a 12
@@ -22,7 +21,6 @@ public class ejer01_ejercicio {
 		
 		float sueldo = 0;
 		
-		input.close();
 		
 		if(horas < 0) {
 			System.out.println("El número de horas introducida no es válida ");
@@ -40,5 +38,6 @@ public class ejer01_ejercicio {
 				}
 		}
 			System.out.println("El sueldo semana que le corresponde es de " + sueldo + " euros");
+			input.close();
 	}
 }
