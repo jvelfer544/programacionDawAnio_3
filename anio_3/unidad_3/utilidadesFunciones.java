@@ -24,7 +24,7 @@ public class utilidadesFunciones {
 	 * @return
 	 */
 	public static boolean esDigito (String num) {
-		return num.matches("\\d");
+		return num.matches("\\d+");
 	}
 	
 	/**
@@ -35,9 +35,27 @@ public class utilidadesFunciones {
 	return cadenaDni.matches("[0-9]{8}-?[a-hj-np-uA-HJ-NP-U]");
 	}
 	
+	/**
+	 * @param codigoPostal
+	 * @return
+	 */
 	public static boolean esCodigoPostal(String codigoPostal) {
 		return codigoPostal.matches("\\d{5}");
 		}
+	
+	/**
+	 * @param numeroTel
+	 * @return
+	 */
+	public static boolean esTelefono (String numeroTel) {
+		return numeroTel.matches("(\\+34|0034)?\\s?[6789]\\d{8}");
+	}
+	
+	public static boolean esEmail (String email) {
+		return email.matches("^[\\w.-]+@[a-zA-Z\\d.-]+\\.[a-zA-Z]{2,6}");
+	}
+	
+	
 	
 	
 }
