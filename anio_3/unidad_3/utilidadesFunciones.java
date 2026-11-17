@@ -9,5 +9,35 @@ public class utilidadesFunciones {
 		return nuevaCadena;
 
 	}
+	
+	/**
+	 * @param cadena
+	 * @param patron
+	 * @return si la cadena cumple con el patrón devuelve true, sino false
+	 */
+	public static boolean testRegex (String cadena, String patron) {
+		return cadena.matches(patron);
+	}
 
+	/**
+	 * @param num
+	 * @return
+	 */
+	public static boolean esDigito (String num) {
+		return num.matches("\\d");
+	}
+	
+	/**
+	 * @param cadenaDni
+	 * @return devuelve true si el dni cumple con el patrón
+	 */
+	public static boolean validarDni(String cadenaDni) {
+	return cadenaDni.matches("[0-9]{8}-?[a-hj-np-uA-HJ-NP-U]");
+	}
+	
+	public static boolean esCodigoPostal(String codigoPostal) {
+		return codigoPostal.matches("\\d{5}");
+		}
+	
+	
 }
