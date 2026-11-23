@@ -15,7 +15,7 @@ public class tarea2PracticaEjer2_Sol_Profesor {
 //		a) Limpieza del texto: Elimina signos de puntuación (puntos, comas,
 //				puntos y comas, dos puntos) mediante expresiones regulares con
 //				StringUtils.replaceAll. --> StringUtils.replaceChars
-		String textoLimpio = StringUtils.replaceChars(texto, ".,;:", " ");
+		String textoLimpio = StringUtils.replaceChars(texto.trim(), ".,;:", " ");
 		System.out.println("texto limpio:\n" + textoLimpio);
 		
 //				b) Tokenización: Divide el texto en un array de palabras individuales
