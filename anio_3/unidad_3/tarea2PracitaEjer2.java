@@ -1,9 +1,5 @@
 package anio_3.unidad_3;
-
 import java.util.Scanner;
-
-import javax.print.attribute.SetOfIntegerSyntax;
-
 import org.apache.commons.lang3.StringUtils;
 
 public class tarea2PracitaEjer2 {
@@ -41,6 +37,7 @@ public class tarea2PracitaEjer2 {
 
 				}
 			}
+			
 		if (palabraCorta.length() == palabraLarga.length()) {
 			System.out.println("La palabra más corta y la palabra más larga son iguales");
 
